@@ -1,6 +1,6 @@
 //by hetp111
 //https://codeforces.com/problemset/problem/158/B
-#include <iostream>
+
 #include <bits/stdc++.h>
 using namespace std;
 
