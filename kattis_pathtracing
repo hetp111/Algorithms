@@ -1,5 +1,5 @@
-//https://open.kattis.com/problems/pathtracing ||  KATTIS IS NOT ACCEPTING ALL THE CASESES EVEN THOUGH ALL MY OUTPUT IS CORRECT TO MY BEST KNOWLEDGE ||
-//het patel - hetp111                          ||  ADDING A NEWLINE IN THE END PASSED 2 CASES, ALTHOUGH IN SAMPLE OUTPUT NO NEWLINE WAS GIVEN. THIS MADE ME HATE KATTIS. FUCKING HELL!
+//https://open.kattis.com/problems/pathtracing ||  KATTIS IS NOT ACCEPTING ALL THE CASESES EVEN THOUGH ALL MY OUTPUT IS CORRECT TO MY BEST KNOWLEDGE  ||
+//het patel - hetp111                          ||  ADDING A NEWLINE IN THE END PASSED 2 CASES, ALTHOUGH IN SAMPLE OUTPUT NO NEWLINE WAS GIVEN. THIS MADE ME HATE KATTIS!  ||
 #include <bits/stdc++.h>
 using namespace std;
 main(){
