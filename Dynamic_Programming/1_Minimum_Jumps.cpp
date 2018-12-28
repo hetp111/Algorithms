@@ -1,4 +1,5 @@
-//Vivekanand_Khyade
+//https://youtu.be/jH_5ypQggWg - video tutorial by Vivekanand Khyade
+//code by Het-
 #include<bits/stdc++.h>
 using namespace std;
 
