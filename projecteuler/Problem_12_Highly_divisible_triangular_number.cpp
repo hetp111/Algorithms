@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <bits/stdc++.h>//problem 12 Highly_divisible_triangular_number
+using namespace std;//https://projecteuler.net/problem=12
 
 int trino(int n){
     return n*(n+1)/2;
