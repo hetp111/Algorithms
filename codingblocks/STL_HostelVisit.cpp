@@ -11,11 +11,11 @@ int main(){//;)
             cin>>x>>y;
             v.push_back(x*x+y*y);
         }else{
-            sort(v.begin(),v.end());
-            if(v.size()>k){
-                v.erase(v.begin()+k,v.end());//reduces time
-            }
             cout<<v[k-1]<<"\n";
+        }
+        sort(v.begin(),v.end());
+        if(v.size()>k){
+            v.erase(v.begin()+k,v.end());//reduces time
         }
     }
 }
