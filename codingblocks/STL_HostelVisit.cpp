@@ -13,7 +13,7 @@ int main(){//;)
         }else{
             sort(v.begin(),v.end());
             if(v.size()>k){
-                v.erase(v.begin()+k,v.end());
+                v.erase(v.begin()+k,v.end());//reduces time limit
             }
             cout<<v[k-1]<<"\n";
         }
