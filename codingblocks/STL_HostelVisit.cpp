@@ -15,7 +15,7 @@ int main(){//;)
         }
         sort(v.begin(),v.end());
         if(v.size()>k){
-            v.erase(v.begin()+k,v.end());//reduces time
+            v.erase(v.end()-1);//reduces time
         }
     }
 }
