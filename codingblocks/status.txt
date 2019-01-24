@@ -1,2 +1,3 @@
 pending:
-stl STRING WINDOW
+stl: STRING WINDOW, subarray with distinct elements
+bitmasking: nqueen, subsums(spoj)
