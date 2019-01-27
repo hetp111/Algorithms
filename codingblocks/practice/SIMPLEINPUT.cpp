@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+//https://hack.codingblocks.com/practice/p/339/58
 main()
 {
     int sum=0;
