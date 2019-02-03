@@ -3,7 +3,7 @@ using namespace std;
 
 //https://www.hackerrank.com/challenges/identify-smith-numbers/problem
 //https://hack.codingblocks.com/contests/c/473/1103
-
+//https://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/
 int sum2(int n){
     int sum=0;
     while(n>0){
@@ -36,7 +36,7 @@ int main(){
         cout<<0;
     }
 }
-
+//https://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/
 /*
 #include <bits/stdc++.h>
 using namespace std;
