@@ -2,7 +2,7 @@
 using namespace std;
 #define FASTER ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
 typedef long long ll;
-
+//https://hack.codingblocks.com/practice/p/387/743
 ll f(ll a, ll b, ll c){
     ll rel=1;
     while(b){
