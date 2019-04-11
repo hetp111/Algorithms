@@ -15,10 +15,9 @@ int f(int n){
 
 int main(){
     FASTER;
-    int n,cur=1,lst=1;cin>>n;
+    int n,cur=1;cin>>n;
     for(int i=2;i<=n;i++){
-        cur=lst+f(i);
-        lst=cur;
+        cur+=f(i);
     }
     cout<<cur;
 }
