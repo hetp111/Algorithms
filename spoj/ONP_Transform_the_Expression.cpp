@@ -19,6 +19,8 @@ Pop the left bracket also from the stack  but doesn't print it.
 [5] Go back to [1]
 [6] exit
 
+//CORRECTION!!! NO NEED FOR WHILE!!!
+
 */
 int prio(char c){
     if(c=='+')return 1;
@@ -44,7 +46,7 @@ int main(){
             if(s[i]=='(' || s[i]==')'){//bracket
                     if(s[i]=='(')stk.push(s[i]);
                     else{
-                        while(stk.top()!='('){
+                        if(stk.top()!='('){
                             ans+=stk.top();
                             stk.pop();
                         }
@@ -53,7 +55,7 @@ int main(){
             }else if(!issym(s[i])){//oprand
                 ans+=s[i];
             }else{//operator
-                while(prio(stk.top())>s[i]){
+                if(prio(stk.top())>s[i]){
                     ans+=stk.top();
                     stk.pop();
                 }
