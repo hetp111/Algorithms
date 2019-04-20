@@ -11,7 +11,11 @@ string f(string s, int opava, int unclose){
         return (s+string(unclose,')'));
     }
     if(unclose==0)return f(s+"(",opava-1,unclose+1);
-    return f(s+"(",opava-1,unclose+1)+f(s+")",opava,unclose-1);
+
+    f(s+")",opava,unclose-1);
+    f(s+"(",opava-1,unclose+1);
+
+    return "69";
 }
 
 int main(){
