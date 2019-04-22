@@ -11,23 +11,22 @@ using namespace std;
 //https://hack.codingblocks.com/contests/c/16/96
 
 char carr[10][4]={
-    {0,0,0,0},
+    {'\0','\0','\0','\0'},
     {'.','+','@','$'},
-    {'a','b','c',0},
-    {'d','e','f',0},
-    {'g','h','i',0},
-    {'j','k','l',0},
-    {'m','n','o',0},
+    {'a','b','c','\0'},
+    {'d','e','f','\0'},
+    {'g','h','i','\0'},
+    {'j','k','l','\0'},
+    {'m','n','o','\0'},
     {'p','q','r','s'},
-    {'t','u','v',0},
+    {'t','u','v','\0'},
     {'w','x','y','z'}
 };
 
 int szofNum(int n){
     if(n==7 || n==9 || n==1)return 4;
-    else return 3;
+    return 3;
 }
-
 
 void f(string num, string str, int i){
     if(str.size()==num.size()){
@@ -35,13 +34,15 @@ void f(string num, string str, int i){
         return;
     }
     for(int j=0;j<szofNum(num[i]-'0');j++){
-        f(num,str+carr[num[i]-'0'][j],i+1);
+        f(num,str+(carr[num[i]-'0'][j]),i+1);
     }
 }
 
 signed main(){
     FASTER;
-    string s;cin>>s;
-    f(s,"",0);
-
+    string s,ss="";cin>>s;
+    for(asd:s){
+        if(asd!='0')ss+=asd;
+    }
+    f(ss,"",0);
 }
