@@ -8,36 +8,30 @@ using namespace std;
 #define FASTER ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
 
 //https://practice.geeksforgeeks.org/problems/possible-words-from-phone-digits/0
+//https://hack.codingblocks.com/contests/c/16/96
 
 char carr[10][4]={
     {0,0,0,0},
-    {0,0,0,0},
-    {'A','B','C',0},
-    {'D','E','F',0},
-    {'G','H','I',0},
-    {'J','K','L',0},
-    {'M','N','O',0},
-    {'P','Q','R','S'},
-    {'T','U','V',0},
-    {'W','X','Y','Z'}
+    {'.','+','@','$'},
+    {'a','b','c',0},
+    {'d','e','f',0},
+    {'g','h','i',0},
+    {'j','k','l',0},
+    {'m','n','o',0},
+    {'p','q','r','s'},
+    {'t','u','v',0},
+    {'w','x','y','z'}
 };
 
 int szofNum(int n){
-    if(n==7 || n==9)return 4;
+    if(n==7 || n==9 || n==1)return 4;
     else return 3;
 }
 
-string tolowr(string s){
-    string ss=s;
-    for(char &i:ss){
-        i=tolower(i);
-    }
-    return ss;
-}
 
 void f(string num, string str, int i){
     if(str.size()==num.size()){
-        cout<<tolowr(str)<<" ";
+        cout<<(str)<<"\n";
         return;
     }
     for(int j=0;j<szofNum(num[i]-'0');j++){
@@ -47,15 +41,7 @@ void f(string num, string str, int i){
 
 signed main(){
     FASTER;
-    int t;cin>>t;
-    while(t--){
-        int n;cin>>n;
-        string s="";
-        while(n--){
-            char cd;cin>>cd;
-            s+=cd;
-        }
-        f(s,"",0);cout<<"\n";
-    }
+    string s;cin>>s;
+    f(s,"",0);
 
 }
