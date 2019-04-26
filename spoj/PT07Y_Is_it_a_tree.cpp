@@ -7,8 +7,8 @@ using namespace std;
 #define FASTER ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
 
 int cycle=0;
-list<int> *lst = new list<int>[1000000];
-bool *boo = new bool[1000000]{0};
+list<int> *lst = new list<int>[10000];
+bool *boo = new bool[10000]{0};
 
 void f(int v, int last){
     if(boo[v]){
