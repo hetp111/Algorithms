@@ -1,3 +1,7 @@
 pending:
-stl: STRING WINDOW, subarray with distinct elements
-bitmasking: nqueen, subsums(spoj)video on codingblocks, NOT SO EASY MATH
+
+stl: 
+>subarray with distinct elements (https://www.geeksforgeeks.org/subarrays-distinct-elements/ https://discuss.codingblocks.com/t/subarrays-with-distinct-elements-hackerblocks/6631)
+
+bitmasking: 
+>nqueen, subsums(spoj)video on codingblocks, NOT SO EASY MATH
