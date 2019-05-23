@@ -13,7 +13,7 @@ template<class A> ostream& operator<<(ostream& out, const vector<A> &a){
 template<class A, class B> istream& operator>>(istream& in, pair<A,B> &a){in>>a.first>>a.second;return in;}
 template<class A> istream& operator>>(istream& in, vector<A> &a){for(A &i:a)in>>i;return in;}
 
-void ispal(string &s){//ifPal s=s+1, if then 9999->10001
+void ispal(string &s){//ifPal s=s+1, if 9999->10001
     int n=s.size();
     int l=0,r=n-1;
     while(l<r){
