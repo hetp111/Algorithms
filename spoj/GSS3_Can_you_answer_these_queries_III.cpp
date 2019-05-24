@@ -59,7 +59,7 @@ node query(int l,int r,int s,int e,int indx,const vector<node> &tree){
 
 void updatee(int i,int num,int s,int e,int indx,vector<node> &tree){
     if(i<s || i>e)return;
-    if(s==e && e==i){
+    if(s==e){//&& e==i not needed
         tree[indx]={num,num,num,num};
         return;
     }
