@@ -14,48 +14,47 @@ template<class A, class B> istream& operator>>(istream& in, pair<A,B> &a){in>>a.
 template<class A> istream& operator>>(istream& in, vector<A> &a){for(A &i:a)in>>i;return in;}
 
 struct node{
-    int totSum=0,maxSum=-INT_MAX,maxPrefix=-INT_MAX,maxSuffix=-INT_MAX;
+    int ans=-INT_MAX;
+    int prefix=-INT_MAX;
+    int suffix=-INT_MAX;
+    int total=-INT_MAX;
 };
 
-void makeTree(int s,int e,int indx,const vi &v,vector<node> &tree){
-    if(e==s){
-        tree[indx].totSum=v[s];
-        tree[indx].maxSum=v[s];
-        tree[indx].maxPrefix=v[s];
-        tree[indx].maxSuffix=v[s];
+void makeTree(int s,int e,int indx,const vi &v, vector<node> &tree){
+    if(s==e){
+        tree[indx]={v[e],v[e],v[e],v[e]};
         return;
     }
     int mid=(s+e)/2;
     makeTree(s,mid,indx*2+1,v,tree);
     makeTree(mid+1,e,indx*2+2,v,tree);
-    tree[indx].totSum=tree[indx*2+1].totSum+tree[indx*2+2].totSum;
-    tree[indx].maxPrefix=max(tree[indx*2+1].maxPrefix,tree[indx*2+2].maxPrefix+tree[indx*2+1].totSum);
-    tree[indx].maxSuffix=max(tree[indx*2+2].maxSuffix,tree[indx*2+1].maxSuffix+tree[indx*2+2].totSum);
-    tree[indx].maxSum=max({tree[indx*2+1].maxSum,tree[indx*2+2].maxSum,tree[indx*2+1].maxSuffix+tree[indx*2+2].maxPrefix});
+    tree[indx]={
+        max({tree[indx*2+1].ans,tree[indx*2+2].ans,tree[indx*2+1].suffix+tree[indx*2+2].prefix}),
+        max({tree[indx*2+1].prefix,tree[indx*2+1].total+tree[indx*2+2].prefix}),
+        max({tree[indx*2+2].suffix,tree[indx*2+2].total+tree[indx*2+1].suffix}),
+        tree[indx*2+1].total+tree[indx*2+2].total
+    };
     return;
 }
 
-node prrrint(int l,int r,int s,int e,int indx,const vector<node> &tree){
+node query(int l,int r,int s,int e,int indx,const vector<node> &tree){
     if(r<s || l>e){
-        node lowInf;
-        lowInf.maxPrefix=-INT_MAX;
-        lowInf.maxSuffix=-INT_MAX;
-        lowInf.maxSum=-INT_MAX;
-        lowInf.totSum=-INT_MAX;
-        return lowInf;
+        node minn;
+        return minn;
     }
     if(l<=s && r>=e){
         return tree[indx];
     }
     int mid=(s+e)/2;
-    node ans;
-    node left=prrrint(l,r,s,mid,indx*2+1,tree);
-    node righ=prrrint(l,r,mid+1,e,indx*2+2,tree);
-    ans.totSum=left.totSum+righ.totSum;
-    ans.maxPrefix=max(left.maxPrefix,righ.maxPrefix+left.totSum);
-    ans.maxSuffix=max(righ.maxSuffix,left.maxSuffix+righ.totSum);
-    ans.maxSum=max({left.maxSum,righ.maxSum,left.maxSuffix+righ.maxPrefix});
-    return ans;
+    node left=query(l,r,s,mid,indx*2+1,tree);
+    node right=query(l,r,mid+1,e,indx*2+2,tree);
+    node Ans={
+        max({left.ans,right.ans,left.suffix+right.prefix}),
+        max({left.prefix,left.total+right.prefix}),
+        max({right.suffix,right.total+left.suffix}),
+        left.total+right.total
+    };
+    return Ans;
 }
 
 signed main(){
@@ -66,8 +65,7 @@ signed main(){
     makeTree(0,n-1,0,v,tree);
     int q;cin>>q;
     while(q--){
-        int l,r;cin>>l>>r;
-        node ans=prrrint(l-1,r-1,0,n-1,0,tree);
-        cout<<ans.maxSum<<"\n";
+        int l,r;cin>>l>>r;l--;r--;
+        cout<<query(l,r,0,n-1,0,tree).ans<<"\n";
     }
 }
