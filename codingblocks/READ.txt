@@ -1,0 +1,5 @@
+my profile: https://hack.codingblocks.com/users/19030
+
+PENDING:
+N-Queen using Bitsets, CB;
+Advanced Recursion-Backtracking Using Bitmasks, CB;
