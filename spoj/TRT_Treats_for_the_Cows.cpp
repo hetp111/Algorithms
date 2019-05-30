@@ -13,7 +13,7 @@ template<class A> ostream& operator<<(ostream& out, const vector<A> &a){
 template<class A, class B> istream& operator>>(istream& in, pair<A,B> &a){in>>a.first>>a.second;return in;}
 template<class A> istream& operator>>(istream& in, vector<A> &a){for(A &i:a)in>>i;return in;}
 
-//rec + memo solution, try dp
+//rec + memo solution here, try dp <3
 
 vector<vi> dp(3000,vi(3000,-1));
 
