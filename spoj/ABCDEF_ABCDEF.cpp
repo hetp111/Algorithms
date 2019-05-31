@@ -21,13 +21,7 @@ signed main(){
         for(int b=0;b<n;b++){
             for(int c=0;c<n;c++){
                 abc.push_back(v[a]*v[b]+v[c]);
-            }
-        }
-    }
-    for(int f=0;f<n;f++){
-        for(int e=0;e<n;e++){
-            for(int d=0;d<n;d++){
-                if(v[d]!=0)fed.push_back((v[f]+v[e])*v[d]);
+                if(v[c]!=0)fed.push_back((v[a]+v[b])*v[c]);
             }
         }
     }
