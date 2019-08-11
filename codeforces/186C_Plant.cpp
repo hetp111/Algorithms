@@ -56,8 +56,8 @@ vector<vi> poww(int n){
 signed main(){
     FASTER;
     int i;cin>>i;
-    vector<vi> Timinus1=poww(i);
-    vector<vi> F1={{1},{1}};
-    vector<vi> anss=multi(Timinus1,F1);
+    vector<vi> Tpowi=poww(i);
+    vector<vi> F0={{1},{1}};
+    vector<vi> anss=multi(Tpowi,F0);
     cout<<anss[0][0];
 }
