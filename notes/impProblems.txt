@@ -1,1 +1,2 @@
 https://github.com/hetp111/CodeAndStuff/blob/master/spoj/ARMY_Army_Strength.cpp   (Priority Queues & Comparators)
+https://github.com/hetp111/CodeAndStuff/blob/master/codeforces/186C_Plant.cpp   (Matrix Exponentiation)
