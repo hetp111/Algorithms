@@ -1,0 +1,1 @@
+s.substr(i,j) will return empty string if i==n
