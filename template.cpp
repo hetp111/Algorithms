@@ -18,5 +18,4 @@ template<class A>istream&operator>>(istream&in,vector<A>&a){for(A &i:a)in>>i;ret
 
 signed main(){
 	FASTER;
-	
 }
