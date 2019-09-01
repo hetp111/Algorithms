@@ -6,6 +6,7 @@ using namespace std;
 #define vi vector<int>
 #define vvi vector<vi>
 #define pii pair<int,int>
+#define vii vector<pii>
 #define MOD 1000000007
 #define eps 1e-8
 #define FASTER ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
