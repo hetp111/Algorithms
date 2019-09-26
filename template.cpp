@@ -1,11 +1,14 @@
 //This template is cursed. Don't use it!
 
 /*
+//
 We buy things we don’t need, 
 with money we don’t have, 
 to impress people we don’t like.
 
+//
 If I hadn't seen such riches I could live with being poor.
+
 */
 
 #include <bits/stdc++.h>//Carefully Crafted by hetp111
