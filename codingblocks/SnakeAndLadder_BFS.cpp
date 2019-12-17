@@ -18,26 +18,27 @@ template<class A,class B>istream&operator>>(istream&in,pair<A,B>&a){return in>>a
 template<class A>istream&operator>>(istream&in,vector<A>&a){for(A &i:a)in>>i;return in;}
 //ifstream cinn("input.txt");ofstream coutt("output.txt");
 
-//https://www.hackerrank.com/challenges/the-quickest-way-up/problem
+
+
 void solve(){
     vi adj[101];
     int board[101]={0};
-    
+    for(int i=1;i<=100;i++)board[i]=i;
     int n;cin>>n;
     while(n--){
         int a,b;cin>>a>>b;
-        board[a]=b-a;
+        board[a]=b;
     }
     int m;cin>>m;
     while(m--){
         int a,b;cin>>a>>b;
-        board[a]=b-a;
+        board[a]=b;
     }
     
     for(int i=1;i<100;i++){
         for(int j=1;j<=6;j++){
-            if((i+j)+board[i+j]>100)continue;
-            adj[i].push_back((i+j)+board[i+j]);
+            if(i+j>100)continue;
+            adj[i].push_back(board[i+j]);
         }
     }
     
