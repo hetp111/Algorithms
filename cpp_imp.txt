@@ -9,3 +9,15 @@ for(int i=0;i<n;i++){
 }
 //
 
+
+//
+when using comparators in set:
+struct compare{
+    bool operator()(const pii &a,const pii &b){
+        if(a.second==b.second)return a.first<b.first;//V imp. or else: (1)
+        return a.second<b.second;
+    }
+};
+if (1) is commented:
+(you put {1, 2} and {2, 2} into that set, it will not read {2, 2} cuz second element is the same it will think that they're the same element)
+//
