@@ -1,1 +1,8 @@
+//
 s.substr(i,j) will return empty string if i==n
+
+//
+https://leetcode.com/problems/sliding-window-median/discuss/96340/O(n-log-k)-C%2B%2B-using-multiset-and-updating-middle-iterator
+mid is an iterator to a multiset
+Just a simple note: "in C++11, newly inserted elements follow their equivalents already in the container."
+Thus, when nums[i] == *mid, we do not need to decrease mid, since nums[i] will inserted after mid.
