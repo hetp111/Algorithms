@@ -43,7 +43,7 @@ void solve(int l,int r,int n,int &ans){
 }
 
 int f(int n,int m){// n/1*1 + n/2*2 ... n/m*n m<=n
-    int ans=0,cur=1;
+    int ans=0;
     solve(1,m,n,ans);
     return ans;
 }
