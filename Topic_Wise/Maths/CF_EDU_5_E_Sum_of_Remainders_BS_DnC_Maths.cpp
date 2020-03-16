@@ -22,6 +22,7 @@ template<class A>istream&operator>>(istream&in,vector<A>&a){for(A &i:a)in>>i;ret
 
 //https://codeforces.com/blog/entry/68972#comment-533763
 //https://discordapp.com/channels/326795829664808960/326795829664808960/689023813861507072
+//PS also look at the previous submission, TLE with BS,loop. Math I dont understand :(
 
 
 const int i2 = (MOD+1)/2;
