@@ -19,6 +19,8 @@ template<class A,class B>istream&operator>>(istream&in,pair<A,B>&a){return in>>a
 template<class A>istream&operator>>(istream&in,vector<A>&a){for(A &i:a)in>>i;return in;}
 //ifstream cinn("input.txt");ofstream coutt("output.txt");
 
+//v[i] is the pos of next occurrence of vv[i] 
+
 int n,q;
 vi tree[4*200005];
 int vv[200005],v[200005];
