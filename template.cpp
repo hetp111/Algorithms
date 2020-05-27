@@ -8,7 +8,8 @@ using namespace std;
 #define pii pair<int,int>
 #define vii vector<pii>
 #define MOD (1000000007)
-//#define MOD (998244353)
+#define MOD2 (998244353)
+#define MOD3 (1000000009)
 #define PI acos(-1)
 #define eps (1e-8)
 #define INF (1e18)
@@ -17,7 +18,9 @@ template<class A,class B>ostream&operator<<(ostream&out,const pair<A,B>&a){retur
 template<class A>ostream&operator<<(ostream&out,const vector<A>&a){for(const A &it:a)out<<it<<" ";return out;}
 template<class A,class B>istream&operator>>(istream&in,pair<A,B>&a){return in>>a.first>>a.second;}
 template<class A>istream&operator>>(istream&in,vector<A>&a){for(A &i:a)in>>i;return in;}
-//ifstream cinn("input.txt");ofstream coutt("output.txt");
+ifstream cinn("in.txt");ofstream coutt("out.txt");
+int poww(const int &a,int b,const int &m=MOD){if(b==0)return 1;int x=poww(a,b/2,m);x=x*x%m;if(b&1)x=x*a%m;return x;}
+int ceil(const int &a,const int &b){return (a-1)/b+1;}
 
 signed main(){
     FASTER;
