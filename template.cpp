@@ -20,7 +20,7 @@ template<class A,class B>istream&operator>>(istream&in,pair<A,B>&a){return in>>a
 template<class A>istream&operator>>(istream&in,vector<A>&a){for(A &i:a)in>>i;return in;}
 ifstream cinn("in.txt");ofstream coutt("out.txt");
 int poww(const int &a,int b,const int &m=MOD){if(b==0)return 1;int x=poww(a,b/2,m);x=x*x%m;if(b&1)x=x*a%m;return x;}
-int ceil(const int &a,const int &b){return (a-1)/b+1;}
+int ceil(const int &a,const int &b){return (a+b-1)/b;}
 ////Read:
 //Use __builtin_popcountll for ll;
 //Check corner cases, n==1;
