@@ -1,8 +1,6 @@
-/*
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization ("unroll-loops")
-*/
 #include <bits/stdc++.h>//Carefully Crafted by hetp111
 using namespace std;
 #define int long long
