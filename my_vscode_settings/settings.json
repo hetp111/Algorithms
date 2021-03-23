@@ -6,7 +6,7 @@
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ -I 'C:\\Users\\Het\\Desktop\\code\\here' -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
         "python": "python -u",
@@ -62,6 +62,11 @@
     "explorer.confirmDelete": false,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "files.autoSave": "off",
-    "editor.fontSize": 16,
-    "editor.detectIndentation": false
+    "editor.fontSize": 18,
+    "editor.detectIndentation": false,
+    "explorer.compactFolders": false,
+    "git.autofetch": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
