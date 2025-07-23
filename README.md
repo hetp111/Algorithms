@@ -1,2 +1,2 @@
 # Algorithms
-Competitive programming, algorithms, data structures...etc.
+Competitive programming, algorithms, data structures.
